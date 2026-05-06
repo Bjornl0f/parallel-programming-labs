@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
+             x:Class="Lab4A.MainPage"
+             Title="Lab 4 — Програма A">
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="10" RowSpacing="6">
+
+        <Label Grid.Row="0" x:Name="StatusLabel" Text="Ініціалізація..."
+               FontAttributes="Bold" FontSize="14" />
+
+        <Border Grid.Row="1" Stroke="DarkSlateGray" StrokeThickness="1">
+            <AbsoluteLayout x:Name="Canvas" BackgroundColor="#0d1b2a"
+                            SizeChanged="Canvas_SizeChanged">
+                <shapes:Ellipse x:Name="Ball" Fill="OrangeRed" Stroke="White" StrokeThickness="2"
+                                WidthRequest="40" HeightRequest="40" />
+            </AbsoluteLayout>
+        </Border>
+
+        <HorizontalStackLayout Grid.Row="2" Spacing="10">
+            <Button x:Name="StartButton" Text="Старт" Clicked="StartButton_Clicked" />
+            <Button x:Name="ResetButton" Text="Скинути позицію" Clicked="ResetButton_Clicked" />
+        </HorizontalStackLayout>
+
+    </Grid>
+
+</ContentPage>

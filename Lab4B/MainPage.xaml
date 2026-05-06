@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
+             x:Class="Lab4B.MainPage"
+             Title="Lab 4 — Програма B">
+
+    <Grid RowDefinitions="Auto,*" Padding="10" RowSpacing="6">
+
+        <Label Grid.Row="0" x:Name="StatusLabel" Text="Підключення до каналу..."
+               FontAttributes="Bold" FontSize="14" />
+
+        <Border Grid.Row="1" Stroke="DarkSlateGray" StrokeThickness="1">
+            <AbsoluteLayout x:Name="Canvas" BackgroundColor="#1b2330"
+                            SizeChanged="Canvas_SizeChanged">
+                <shapes:Ellipse x:Name="Ball" Fill="MediumSpringGreen" Stroke="White" StrokeThickness="2"
+                                IsVisible="False" />
+            </AbsoluteLayout>
+        </Border>
+
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1.MainPage"
+             Title="Лаб 1: Рухомі прямокутники">
+
+    <Grid RowDefinitions="Auto,*" Padding="10" RowSpacing="10">
+        <HorizontalStackLayout Grid.Row="0" Spacing="10" VerticalOptions="Center">
+            <Label Text="Кількість задач:" VerticalOptions="Center" />
+            <Entry x:Name="CountEntry" Text="5" WidthRequest="80" Keyboard="Numeric" />
+            <Button x:Name="ApplyButton" Text="Застосувати" Clicked="ApplyButton_Clicked" />
+            <Button x:Name="AddButton" Text="+1" Clicked="AddButton_Clicked" />
+            <Button x:Name="RemoveButton" Text="-1" Clicked="RemoveButton_Clicked" />
+            <Label x:Name="StatusLabel" Text="Активних задач: 0"
+                   VerticalOptions="Center" Margin="20,0,0,0" FontAttributes="Bold" />
+        </HorizontalStackLayout>
+
+        <Border Grid.Row="1" Stroke="Gray" StrokeThickness="1" Padding="0">
+            <AbsoluteLayout x:Name="Container"
+                            BackgroundColor="#1a1a2e"
+                            SizeChanged="Container_SizeChanged" />
+        </Border>
+    </Grid>
+
+</ContentPage>

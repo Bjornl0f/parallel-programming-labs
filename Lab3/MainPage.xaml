@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab3.MainPage"
+             Title="Лаб 3: Синхронізація RGB-компонентів">
+
+    <Grid RowDefinitions="Auto,*" Padding="10" RowSpacing="6">
+
+        <Label Grid.Row="0" x:Name="InfoLabel"
+               Text="Натисніть на ліву верхню чверть для генерації кольору"
+               FontAttributes="Bold" FontSize="14" HorizontalOptions="Center" />
+
+        <Grid Grid.Row="1" RowDefinitions="*,*" ColumnDefinitions="*,*"
+              RowSpacing="2" ColumnSpacing="2">
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <BoxView x:Name="Quad1View" Color="LightGray" />
+                <Label x:Name="Quad1Label" Text="Клік" TextColor="Black"
+                       HorizontalOptions="Center" VerticalOptions="Center"
+                       FontSize="18" FontAttributes="Bold" InputTransparent="True" />
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Quad1_Tapped" />
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <BoxView x:Name="Quad2View" Color="Black" />
+                <Label x:Name="Quad2Label" Text="(R, 0, 0)" TextColor="White"
+                       HorizontalOptions="Center" VerticalOptions="Center"
+                       FontSize="18" FontAttributes="Bold" InputTransparent="True" />
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <BoxView x:Name="Quad3View" Color="Black" />
+                <Label x:Name="Quad3Label" Text="(0, G, 0)" TextColor="White"
+                       HorizontalOptions="Center" VerticalOptions="Center"
+                       FontSize="18" FontAttributes="Bold" InputTransparent="True" />
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <BoxView x:Name="Quad4View" Color="Black" />
+                <Label x:Name="Quad4Label" Text="(0, 0, B)" TextColor="White"
+                       HorizontalOptions="Center" VerticalOptions="Center"
+                       FontSize="18" FontAttributes="Bold" InputTransparent="True" />
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
